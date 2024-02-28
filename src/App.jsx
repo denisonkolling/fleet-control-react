@@ -12,6 +12,7 @@ const ReactQueryDemo = Loadable(lazy(() => import('./pages/demos/ReactQueryDemo'
 const AuthLogin = Loadable(lazy(() => import('./pages/authentication/Login')));
 const AuthRegister = Loadable(lazy(() => import('./pages/authentication/Register')));
 const CreateDriver = Loadable(lazy(() => import('./pages/driver/CreateDriver')));
+const DrivingHours = Loadable(lazy(() => import('./pages/driver/DrivingHours')));
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 						<Route path="sample-page" element={<SamplePage />} />
 						<Route path="react-query" element={<ReactQueryDemo />} />
 						<Route path="create-driver" element={<CreateDriver />} />
+						<Route path="driving-hours" element={<DrivingHours />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />

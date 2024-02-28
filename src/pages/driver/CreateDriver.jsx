@@ -1,7 +1,7 @@
 import MainCard from '../../components/MainCard';
 import React, { useState } from 'react';
 import { TbBrandPaypal } from 'react-icons/tb';
-import { BsBank } from "react-icons/bs";
+import { BsBank } from 'react-icons/bs';
 import {
 	TextField,
 	Button,
@@ -210,7 +210,7 @@ const CreateDriver = () => {
 				<Grid item xs={12} md={7} lg={8}>
 					<MainCard title="Payment">
 						<Typography variant="body2" gutterBottom>
-							<Box sx={{ p: 1,}}>
+							<Box sx={{ p: 1 }}>
 								<Grid item>
 									<Stack
 										direction="row"
@@ -235,7 +235,7 @@ const CreateDriver = () => {
 											<TbBrandPaypal />
 											&nbsp;Paypal
 										</Button>
-                    <Button
+										<Button
 											sx={{ m: 1 }}
 											size="medium"
 											onClick={() => setSlot('bank')}
@@ -251,43 +251,37 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-        <Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={8}>
 					<MainCard title="Password">
 						<Typography variant="body2" gutterBottom>
-							<Box sx={{ p: 1,}}>
+							<Box sx={{ p: 1 }}>
 								<Grid item>
 									<Stack
 										direction="row"
 										alignItems="center"
 										spacing={0}
-										sx={{ my: 1 }}>
-									
-									</Stack>
+										sx={{ my: 1 }}></Stack>
 								</Grid>
 							</Box>
 						</Typography>
 					</MainCard>
 				</Grid>
 
-        
-        <Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={8}>
 					<MainCard title="Settings">
 						<Typography variant="body2" gutterBottom>
-							<Box sx={{ p: 1,}}>
+							<Box sx={{ p: 1 }}>
 								<Grid item>
 									<Stack
 										direction="row"
 										alignItems="center"
 										spacing={0}
-										sx={{ my: 1 }}>
-									
-									</Stack>
+										sx={{ my: 1 }}></Stack>
 								</Grid>
 							</Box>
 						</Typography>
 					</MainCard>
 				</Grid>
-
 			</Grid>
 		</>
 	);
