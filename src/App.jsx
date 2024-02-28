@@ -15,6 +15,7 @@ const CreateDriver = Loadable(lazy(() => import('./pages/driver/CreateDriver')))
 const DrivingHours = Loadable(lazy(() => import('./pages/driver/DrivingHours')));
 const CreateTyre = Loadable(lazy(() => import('./pages/tyre/CreateTyre')));
 const TyreReading = Loadable(lazy(() => import('./pages/tyre/TyreReading')));
+const ListTyreReading = Loadable(lazy(() => import('./pages/tyre/ListTyreReading')));
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 						<Route path="driving-hours" element={<DrivingHours />} />
 						<Route path="create-tyre" element={<CreateTyre />} />
 						<Route path="tyre-reading" element={<TyreReading />} />
+						<Route path="list-tyre-reading" element={<ListTyreReading />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />
