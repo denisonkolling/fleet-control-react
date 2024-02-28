@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4B9CB2;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#B3E2E5;}
+	.st3{fill:#6DBCDB;}
+	.st4{fill:#C5ECED;}
+	.st5{fill:#5BABC4;}
+	.st6{fill:#333333;}
+	.st7{fill:#4D4D4D;}
+	.st8{fill:none;stroke:#FFFFFF;stroke-width:5.9306;stroke-miterlimit:10;}
+</style>
+<g>
+	<polygon class="st0" points="825.8,608.3 572.9,608.3 572.9,301.6 731,301.6 825.8,463.9 	"/>
+	<path class="st1" d="M765.6,474.1H621.2c-7.2,0-13.1-5.9-13.1-13.1V340.8c0-7.2,5.9-13.1,13.1-13.1h73.5c4.6,0,8.9,2.5,11.3,6.5
+		l70.9,120.2C782.1,463,775.8,474.1,765.6,474.1z"/>
+	<path class="st2" d="M662,518.4h-26.7c-3.2,0-5.9-2.6-5.9-5.9l0,0c0-3.2,2.6-5.9,5.9-5.9H662c3.2,0,5.9,2.6,5.9,5.9l0,0
+		C667.9,515.7,665.2,518.4,662,518.4z"/>
+	<path class="st1" d="M825.8,575.7h-19.2c-3.7,0-6.7-3-6.7-6.7v-35.6c0-3.7,3-6.7,6.7-6.7h19.2V575.7z"/>
+	<path class="st3" d="M133.7,608.3h443.8v-329c0-10-8.1-18.1-18.1-18.1H151.8c-10,0-18.1,8.1-18.1,18.1V608.3z"/>
+	<path class="st3" d="M831.6,642.2H128.4c-12.4,0-22.5-10.1-22.5-22.5l0,0c0-12.4,10.1-22.5,22.5-22.5h703.2
+		c12.4,0,22.5,10.1,22.5,22.5l0,0C854.1,632.1,844,642.2,831.6,642.2z"/>
+	<g>
+		<path class="st4" d="M608.1,460.9c0,1.4,0.3,2.8,0.7,4.1c24.5-12.5,93.4-47.1,134.5-67.7l-9.2-15.6l-126,65.3V460.9z"/>
+		<path class="st4" d="M750.7,409.9L627,474.1h138.6c10.2,0,16.5-11,11.3-19.8L750.7,409.9z"/>
+		<path class="st4" d="M708.2,337.8l-2.2-3.7c-2.4-4-6.7-6.5-11.3-6.5h-73.5c-7.2,0-13.1,5.9-13.1,13.1v47.4
+			C630.2,376.9,672.5,355.7,708.2,337.8z"/>
+	</g>
+	<rect x="135.2" y="571.4" class="st5" width="443.8" height="25.8"/>
+	<circle class="st6" cx="260.2" cy="642.2" r="56.6"/>
+	<circle class="st7" cx="260.2" cy="642.2" r="30.4"/>
+	<circle class="st6" cx="675.7" cy="642.2" r="56.6"/>
+	<circle class="st7" cx="675.7" cy="642.2" r="30.4"/>
+	<g>
+		<ellipse class="st8" cx="355.6" cy="420" rx="112.5" ry="112.4"/>
+		<ellipse class="st8" cx="355.6" cy="420" rx="60.3" ry="112.4"/>
+		<line class="st8" x1="355.6" y1="307.6" x2="355.6" y2="532.4"/>
+		<line class="st8" x1="260.2" y1="360.5" x2="451" y2="360.5"/>
+		<line class="st8" x1="244.3" y1="424" x2="466.9" y2="424"/>
+		<line class="st8" x1="263.4" y1="484.3" x2="444.6" y2="484.3"/>
+	</g>
+</g>
+</svg>
