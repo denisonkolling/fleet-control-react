@@ -13,6 +13,8 @@ const AuthLogin = Loadable(lazy(() => import('./pages/authentication/Login')));
 const AuthRegister = Loadable(lazy(() => import('./pages/authentication/Register')));
 const CreateDriver = Loadable(lazy(() => import('./pages/driver/CreateDriver')));
 const DrivingHours = Loadable(lazy(() => import('./pages/driver/DrivingHours')));
+const CreateTyre = Loadable(lazy(() => import('./pages/tyre/CreateTyre')));
+const TyreReading = Loadable(lazy(() => import('./pages/tyre/TyreReading')));
 
 function App() {
 	return (
@@ -26,6 +28,8 @@ function App() {
 						<Route path="react-query" element={<ReactQueryDemo />} />
 						<Route path="create-driver" element={<CreateDriver />} />
 						<Route path="driving-hours" element={<DrivingHours />} />
+						<Route path="create-tyre" element={<CreateTyre />} />
+						<Route path="tyre-reading" element={<TyreReading />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />

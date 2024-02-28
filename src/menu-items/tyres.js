@@ -1,7 +1,9 @@
 import { GiCarWheel } from "react-icons/gi";
+import { TfiRulerPencil } from "react-icons/tfi";
 
 const icons = {
   GiCarWheel,
+  TfiRulerPencil,
 };
 
 export const tyres = {
@@ -11,10 +13,17 @@ export const tyres = {
   children: [
     {
       id: "create-tyre",
-      title: "Create Tyre",
+      title: "Create",
       type: "item",
       url: "/create-tyre",
       icon: icons.GiCarWheel,
+    },
+    {
+      id: "tyre-reading",
+      title: "Reading",
+      type: "item",
+      url: "/tyre-reading",
+      icon: icons.TfiRulerPencil,
     },
   ],
 };
