@@ -46,9 +46,9 @@ function MainLayout() {
         <Toolbar />
         <Breadcrumbs
           navigation={menuItems}
-          title
+          title={false}
           // titleBottom
-          // card={false}
+          card={false}
           divider={false}
         />
         <Outlet />

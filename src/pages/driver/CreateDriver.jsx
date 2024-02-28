@@ -30,8 +30,8 @@ import {
 
 const CreateDriver = () => {
 	const [selectedDate, handleDateChange] = React.useState(new Date());
-	const [value, setValue] = useState('today');
-	const [slot, setSlot] = useState('week');
+	const [value, setValue] = useState('');
+	const [slot, setSlot] = useState('card');
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
@@ -55,6 +55,7 @@ const CreateDriver = () => {
 	return (
 		<>
 			<Grid container rowSpacing={4.5} columnSpacing={2.75} sx={{ p: 2 }}>
+
 				<Grid item xs={12} md={5} lg={3}>
 					<MainCard sx={{ mt: 0 }} content={false}>
 						<Box sx={{ p: 3, pb: 0 }}>

@@ -17,6 +17,7 @@ export const drivers = {
       type: "item",
       url: "/create-driver",
       icon: icons.UserAddOutlined,
+      breadcrumbs: true,
     },
     {
       id: "driving-hours",
