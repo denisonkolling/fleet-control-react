@@ -107,7 +107,7 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-				<Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={9}>
 					<MainCard title="Personal Information">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 3, pb: 0 }}>
@@ -207,7 +207,7 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-				<Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Payment">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 1 }}>
@@ -251,7 +251,7 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-				<Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Password">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 1 }}>
@@ -267,7 +267,7 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-				<Grid item xs={12} md={7} lg={8}>
+				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Settings">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 1 }}>

@@ -11,9 +11,9 @@ export const expenses = {
   children: [
     {
       id: "sample-page",
-      title: "Expenses Report",
+      title: "Report",
       type: "item",
-      url: "/sample-page",
+      url: "/expense-report",
       icon: icons.LuBarChart3,
     },
   ],

@@ -11,7 +11,7 @@ export const products = {
   children: [
     {
       id: "sample-page",
-      title: "Create Product",
+      title: "Create",
       type: "item",
       url: "/sample-page",
       icon: icons.BsBoxSeam,

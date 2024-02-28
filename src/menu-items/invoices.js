@@ -11,7 +11,7 @@ export const invoices = {
   children: [
     {
       id: "create-invoice",
-      title: "Create Invoice",
+      title: "Create",
       type: "item",
       url: "/create-invoice",
       icon: icons.LiaFileInvoiceSolid,

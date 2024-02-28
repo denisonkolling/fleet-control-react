@@ -11,7 +11,7 @@ export const customers = {
   children: [
     {
       id: "create-customer",
-      title: "Create Customer",
+      title: "Create",
       type: "item",
       url: "/create-customer",
       icon: icons.UserAddOutlined,

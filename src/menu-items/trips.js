@@ -13,16 +13,16 @@ export const trips = {
   children: [
     {
       id: "create-trip",
-      title: "Create Trip",
+      title: "Create",
       type: "item",
       url: "/create-trip",
       icon: icons.BiTrip,
     },
     {
-      id: "sample-page",
-      title: "Trip Expenses",
+      id: "trip-expenses",
+      title: "Expenses",
       type: "item",
-      url: "/sample-page",
+      url: "/trip-expenses",
       icon: icons.DollarOutlined,
     },
   ],
