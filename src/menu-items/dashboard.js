@@ -5,7 +5,7 @@ const icons = {
 
 export const dashboard = {
   id: "group-dashboard",
-  title: "",
+  title: "Dashboard",
   type: "group",
   children: [
     {

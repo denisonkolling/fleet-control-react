@@ -5,7 +5,7 @@ const icons = {
 };
 
 export const drivers = {
-  id: "drivers",
+  id: "group-driver",
   title: "Drivers",
   type: "group",
   children: [
@@ -13,7 +13,7 @@ export const drivers = {
       id: "create-driver",
       title: "Create Driver",
       type: "item",
-      url: "/sample-page",
+      url: "/create-driver",
       icon: icons.UserAddOutlined,
     },
   ],
