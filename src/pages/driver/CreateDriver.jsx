@@ -2,36 +2,19 @@ import MainCard from '../../components/MainCard';
 import React, { useState } from 'react';
 import { TbBrandPaypal } from 'react-icons/tb';
 import { BsBank } from 'react-icons/bs';
-import {
-	TextField,
-	Button,
-	Grid,
-	Stack,
-	Box,
-	CardContent,
-	Typography,
-	Avatar,
-	Menu,
-	MenuItem,
-	List,
-	ListItem,
-	ListItemText,
-} from '@mui/material';
+import { TextField, Button, Grid, Stack, Box, CardContent, Typography, Avatar, List, ListItem, ListItemText, Divider,	Switch,} from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import {
-	UserAddOutlined,
-	CreditCardOutlined,
-	LockOutlined,
-	SettingOutlined,
-} from '@ant-design/icons';
+import { UserAddOutlined, CreditCardOutlined, LockOutlined, SettingOutlined, MailOutlined, FileDoneOutlined, TranslationOutlined,} from '@ant-design/icons';
+import img from '../../assets/images/truck-driver.jpg'
 
 const CreateDriver = () => {
-	const [selectedDate, handleDateChange] = React.useState(new Date());
+	const [selectedDate, handleDateChange] = useState(new Date());
 	const [value, setValue] = useState('');
-	const [slot, setSlot] = useState('card');
+	const [slot, setSlot] = useState('null');
+
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
@@ -54,31 +37,25 @@ const CreateDriver = () => {
 
 	return (
 		<>
-			<Grid container rowSpacing={4.5} columnSpacing={2.75} sx={{ p: 2 }}>
-
-				<Grid item xs={12} md={5} lg={3}>
+			<Grid container rowSpacing={4.5} columnSpacing={2.75} sx={{ p: 0 }}>
+				{/* Driver Card */}
+				<Grid item xs={12} md={5} lg={2}>
 					<MainCard sx={{ mt: 0 }} content={false}>
-						<Box sx={{ p: 3, pb: 0 }}>
+						<Box sx={{ p: 0, pb: 0 }}>
 							<Stack spacing={2}>
 								<CardContent>
-									<Avatar
-										sx={{
-											width: 100,
-											height: 100,
-											margin: 'auto',
-											marginBottom: 2,
-										}}
+									<Avatar sx={{ width: 120, height: 120, margin: 'auto', marginBottom: 2,}}
 										alt="User Photo"
-										src="/path/to/user-photo.jpg"
+										src={img}
 									/>
 									<Typography
-										variant="h5"
+										variant="h4"
 										component="div"
 										sx={{ textAlign: 'center', marginBottom: 1 }}>
 										John Doe
 									</Typography>
 									<Typography
-										variant="body2"
+										variant="body1"
 										color="text.secondary"
 										sx={{ textAlign: 'center', marginBottom: 2 }}>
 										Truck Driver
@@ -108,7 +85,8 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
-				<Grid item xs={12} md={7} lg={9}>
+				{/* Driver Form */}
+				<Grid item xs={12} md={7} lg={10}>
 					<MainCard title="Personal Information">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 3, pb: 0 }}>
@@ -168,7 +146,7 @@ const CreateDriver = () => {
 											<TextField
 												fullWidth
 												name="licenseClass"
-												label="Class"
+												label=" License Class"
 												type="text"
 												value={formData.licenseClass}
 												onChange={handleChange}
@@ -178,14 +156,15 @@ const CreateDriver = () => {
 											<LocalizationProvider dateAdapter={AdapterDayjs}>
 												<DatePicker
 													fullWidth
-													label="Expiry Date"
+													label="License Expiry Date"
 													inputVariant="outlined"
 													value={dayjs(value.expiryDate)}
 													onChange={handleDateChange}
 												/>
 											</LocalizationProvider>
 										</Grid>
-										<Grid item xs={12}>
+
+										<Grid container justifyContent="flex-end" xs={12}>
 											<Button
 												variant="contained"
 												color="primary"
@@ -208,11 +187,13 @@ const CreateDriver = () => {
 					</MainCard>
 				</Grid>
 
+				{/* Paymet Card */}
 				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Payment">
 						<Typography variant="body2" gutterBottom>
 							<Box sx={{ p: 1 }}>
 								<Grid item>
+									{/* Payment Type Buttons */}
 									<Stack
 										direction="row"
 										alignItems="center"
@@ -248,10 +229,136 @@ const CreateDriver = () => {
 									</Stack>
 								</Grid>
 							</Box>
+
+							<Box sx={{ px: 2, pb: 0 }}>
+								{/* Credit Card Form */}
+								{slot === 'card' ? (
+									<>
+										<form onSubmit={handleSubmit}>
+											<Grid container spacing={3} sx={{ py: 0, pb: 0, pt: 0 }}>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="carholder"
+														label="Carholder Name"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="cardnumber"
+														label="Card Number"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={6} lg={6}>
+													<TextField
+														fullWidth
+														name="expiry"
+														label="Expiry Date"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={6} lg={6}>
+													<TextField
+														fullWidth
+														name="cvv"
+														label="CVV"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+											</Grid>
+										</form>
+									</>
+								) : null}
+								{/* Paypal Form */}
+								{slot === 'paypal' ? (
+									<>
+										<form onSubmit={handleSubmit}>
+											<Grid container spacing={3} sx={{ py: 0, pb: 0, pt: 0 }}>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="email"
+														label="Email Address"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+											</Grid>
+										</form>
+									</>
+								) : null}
+
+								{/* Bank Account Form */}
+								{slot === 'bank' ? (
+									<>
+										<form onSubmit={handleSubmit}>
+											<Grid container spacing={3} sx={{ py: 0, pb: 0, pt: 0 }}>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="bank"
+														label="Bank"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="sortCode"
+														label="Sort Code"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="accountNumber"
+														label="Account Number"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+											</Grid>
+										</form>
+									</>
+								) : null}
+
+								<Grid
+									container
+									justifyContent="flex-end"
+									xs={12}
+									sx={{ mt: 2 }}>
+									<Button
+										variant="contained"
+										color="primary"
+										type="submit"
+										sx={{ my: 2 }}>
+										Save
+									</Button>
+									<Button
+										variant="outlined"
+										color="secondary"
+										type="submit"
+										sx={{ m: 2 }}>
+										Cancel
+									</Button>
+								</Grid>
+							</Box>
 						</Typography>
 					</MainCard>
 				</Grid>
 
+				{/* Password Card */}
 				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Password">
 						<Typography variant="body2" gutterBottom>
@@ -261,7 +368,55 @@ const CreateDriver = () => {
 										direction="row"
 										alignItems="center"
 										spacing={0}
-										sx={{ my: 1 }}></Stack>
+										sx={{ my: 1 }}>
+										<form onSubmit={handleSubmit}>
+											<Grid container spacing={3} sx={{ py: 0, pb: 0, pt: 0 }}>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="carholder"
+														label="Old Password"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="cardnumber"
+														label="New Password"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+												<Grid item xs={12} sm={12} lg={12}>
+													<TextField
+														fullWidth
+														name="expiry"
+														label="Confirm Password"
+														// value={formData.firstName}
+														// onChange={handleChange}
+													/>
+												</Grid>
+											</Grid>
+										</form>
+									</Stack>
+									<Grid container justifyContent="flex-end" xs={12}>
+										<Button
+											variant="contained"
+											color="primary"
+											type="submit"
+											sx={{ my: 2 }}>
+											Save
+										</Button>
+										<Button
+											variant="outlined"
+											color="secondary"
+											type="submit"
+											sx={{ m: 2 }}>
+											Cancel
+										</Button>
+									</Grid>
 								</Grid>
 							</Box>
 						</Typography>
@@ -271,15 +426,96 @@ const CreateDriver = () => {
 				<Grid item xs={12} md={7} lg={4}>
 					<MainCard title="Settings">
 						<Typography variant="body2" gutterBottom>
-							<Box sx={{ p: 1 }}>
+							<Box>
 								<Grid item>
 									<Stack
 										direction="row"
 										alignItems="center"
 										spacing={0}
-										sx={{ my: 1 }}></Stack>
+										sx={{ my: 1 }}>
+										<Grid item xs={12} md={12} lg={12}>
+											<List>
+												<ListItem>
+													<FileDoneOutlined
+														style={{
+															fontSize: '24px',
+															padding: '6px',
+															color: '#0A59DA',
+														}}
+													/>
+													<ListItemText
+														sx={{ mt: 0 }}
+														primary="Delivery Order Confirmation"
+														secondary="You will be notified when delivery orders are done"
+													/>
+													<Switch />
+												</ListItem>
+												<Divider />
+												<ListItem>
+													<MailOutlined
+														style={{
+															fontSize: '24px',
+															padding: '6px',
+															color: '#0A59DA',
+														}}
+													/>
+													<ListItemText
+														primary="Email Notification"
+														secondary="Turn on email notification to get updates"
+													/>
+													<Switch />
+												</ListItem>
+												<Divider />
+												<ListItem>
+													<MailOutlined
+														style={{
+															fontSize: '24px',
+															padding: '6px',
+															color: '#0A59DA',
+														}}
+													/>
+													<ListItemText
+														primary="Text Message Notification"
+														secondary="Turn on SMS notification to get updates"
+													/>
+													<Switch />
+												</ListItem>
+												<Divider />
+												<ListItem>
+													<TranslationOutlined
+														style={{
+															fontSize: '24px',
+															padding: '6px',
+															color: '#0A59DA',
+														}}
+													/>
+													<ListItemText
+														primary="Language Change"
+														secondary="Translate messages to the driver language"
+													/>
+													<Switch />
+												</ListItem>
+											</List>
+										</Grid>
+									</Stack>
 								</Grid>
 							</Box>
+							<Grid container justifyContent="flex-end" xs={12}>
+								<Button
+									variant="contained"
+									color="primary"
+									type="submit"
+									sx={{ my: 2 }}>
+									Save
+								</Button>
+								<Button
+									variant="outlined"
+									color="secondary"
+									type="submit"
+									sx={{ m: 2 }}>
+									Cancel
+								</Button>
+							</Grid>
 						</Typography>
 					</MainCard>
 				</Grid>

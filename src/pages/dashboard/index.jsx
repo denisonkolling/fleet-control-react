@@ -12,7 +12,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
-// import OrdersTable from "./OrdersTable";
+import OrdersTable from "./OrdersTable";
 import IncomeAreaChart from "./IncomeAreaChart";
 import MonthlyBarChart from "./MonthlyBarChart";
 import ReportAreaChart from "./ReportAreaChart";
@@ -169,7 +169,7 @@ function DashboardDefault() {
           <Grid item />
         </Grid>
         <MainCard sx={{ mt: 2 }} content={false}>
-          {/* <OrdersTable /> */}
+          <OrdersTable />
         </MainCard>
       </Grid>
       <Grid item xs={12} md={5} lg={4}>
