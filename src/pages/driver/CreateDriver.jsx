@@ -2,37 +2,40 @@ import MainCard from '../../components/MainCard';
 import React, { useState } from 'react';
 import { TbBrandPaypal } from 'react-icons/tb';
 import { BsBank } from 'react-icons/bs';
-import { TextField, Button, Grid, Stack, Box, CardContent, Typography, Avatar, List, ListItem, ListItemText, Divider,	Switch,} from '@mui/material';
+import {	TextField,	Button,	Grid,	Stack,	Box,	CardContent,	Typography,	Avatar,	List,	ListItem,	ListItemText,	Divider,	Switch,} from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import { UserAddOutlined, CreditCardOutlined, LockOutlined, SettingOutlined, MailOutlined, FileDoneOutlined, TranslationOutlined,} from '@ant-design/icons';
-import img from '../../assets/images/truck-driver.jpg'
+import {	UserAddOutlined,	CreditCardOutlined,	LockOutlined,	SettingOutlined,	MailOutlined,	FileDoneOutlined,	TranslationOutlined,} from '@ant-design/icons';
+import img from '../../assets/images/truck-driver.jpg';
+import { saveDriver } from '../../api/driver';
 
 const CreateDriver = () => {
-	const [selectedDate, handleDateChange] = useState(new Date());
+	const [selectedBirthdayDate, handleBirthdayDateChange] = useState(new Date());
+	const [selectedExpiryLicenseDate, handleExpiryLicenseDate] = useState(new Date());
 	const [value, setValue] = useState('');
 	const [slot, setSlot] = useState('null');
 
 	const [formData, setFormData] = useState({
+		id: 0,
 		firstName: '',
 		lastName: '',
-		birthDate: null,
-		licenseNumber: '',
+		birthday: '',
+		nationality: '',
+		licenseId: '',
+		licenseClass: '',
+		licenseExpiryDate: '',
 	});
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setFormData((prevData) => ({
-			...prevData,
-			[name]: value,
-		}));
+		setFormData((prevData) => ({ ...prevData, [name]: value }));
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(formData);
+		saveDriver(formData);
 	};
 
 	return (
@@ -44,7 +47,13 @@ const CreateDriver = () => {
 						<Box sx={{ p: 0, pb: 0 }}>
 							<Stack spacing={2}>
 								<CardContent>
-									<Avatar sx={{ width: 120, height: 120, margin: 'auto', marginBottom: 2,}}
+									<Avatar
+										sx={{
+											width: 120,
+											height: 120,
+											margin: 'auto',
+											marginBottom: 2,
+										}}
 										alt="User Photo"
 										src={img}
 									/>
@@ -117,7 +126,7 @@ const CreateDriver = () => {
 													label="Birth Date"
 													inputVariant="outlined"
 													value={dayjs(value.birthDate)}
-													onChange={handleDateChange}
+													onChange={handleBirthdayDateChange}
 												/>
 											</LocalizationProvider>
 										</Grid>
@@ -159,12 +168,12 @@ const CreateDriver = () => {
 													label="License Expiry Date"
 													inputVariant="outlined"
 													value={dayjs(value.expiryDate)}
-													onChange={handleDateChange}
+													onChange={handleExpiryLicenseDate}
 												/>
 											</LocalizationProvider>
 										</Grid>
 
-										<Grid container justifyContent="flex-end" xs={12}>
+										<Grid container justifyContent="flex-end" item xs={12}>
 											<Button
 												variant="contained"
 												color="primary"
@@ -239,8 +248,8 @@ const CreateDriver = () => {
 												<Grid item xs={12} sm={12} lg={12}>
 													<TextField
 														fullWidth
-														name="carholder"
-														label="Carholder Name"
+														name="cardholder"
+														label="Card Holder Name"
 														// value={formData.firstName}
 														// onChange={handleChange}
 													/>
@@ -401,7 +410,7 @@ const CreateDriver = () => {
 											</Grid>
 										</form>
 									</Stack>
-									<Grid container justifyContent="flex-end" xs={12}>
+									<Grid container justifyContent="flex-end" item xs={12}>
 										<Button
 											variant="contained"
 											color="primary"
@@ -500,7 +509,7 @@ const CreateDriver = () => {
 									</Stack>
 								</Grid>
 							</Box>
-							<Grid container justifyContent="flex-end" xs={12}>
+							<Grid container justifyContent="flex-end" item xs={12}>
 								<Button
 									variant="contained"
 									color="primary"
