@@ -17,6 +17,8 @@ const CreateTyre = Loadable(lazy(() => import('./pages/tyre/CreateTyre')));
 const TyreReading = Loadable(lazy(() => import('./pages/tyre/TyreReading')));
 const ListTyreReading = Loadable(lazy(() => import('./pages/tyre/ListTyreReading')));
 const CreateVehicle = Loadable(lazy(() => import('./pages/vehicle/CreateVehicle')));
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	return (
@@ -41,6 +43,7 @@ function App() {
 					</Route>
 				</Routes>
 			</ScrollTop>
+			<ToastContainer />
 		</ThemeCustomization>
 	);
 }

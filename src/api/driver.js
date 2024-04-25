@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const saveDriver = async (customer) => {
+export const saveDriver = async (driver) => {
 	try {
 		return await axios.post(
-			`${import.meta.env.VITE_API_BASE_URL}/api/v2/driver`,
-			customer
+			`${import.meta.env.VITE_API_BASE_URL}/driver`,
+			driver
 		);
 	} catch (e) {
 		throw e;
