@@ -59,8 +59,10 @@ const CreateDriver = () => {
     try {
       await saveDriver(formData);
       successNotification("Driver information saved successfully.");
+      clearForm();
     } catch (err) {
       errorNotification("Failed to save driver information.");
+      console.log(err);
     }
   };
 
