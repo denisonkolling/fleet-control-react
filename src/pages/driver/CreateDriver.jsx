@@ -1,5 +1,5 @@
 import MainCard from "../../components/MainCard";
-import React, { useState } from "react";
+import { useState } from "react";
 import { TbBrandPaypal } from "react-icons/tb";
 import { BsBank } from "react-icons/bs";
 import {
@@ -46,7 +46,7 @@ const CreateDriver = () => {
     nationality: "",
     licenseId: "",
     licenseClass: "",
-    expiryDate: null,
+    licenseExpiryDate: null,
   });
 
   const handleChange = (e) => {
@@ -57,6 +57,7 @@ const CreateDriver = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log(formData);
       await saveDriver(formData);
       successNotification("Driver information saved successfully.");
       clearForm();
@@ -88,7 +89,7 @@ const CreateDriver = () => {
       nationality: "",
       licenseId: "",
       licenseClass: "",
-      expiryDate: null,
+      licenseExpiryDate: null,
     });
   };
 
@@ -211,7 +212,7 @@ const CreateDriver = () => {
                       <TextField
                         fullWidth
                         name="licenseClass"
-                        label=" License Class"
+                        label="License Class"
                         type="text"
                         value={formData.licenseClass}
                         onChange={handleChange}
@@ -223,7 +224,7 @@ const CreateDriver = () => {
                           fullWidth
                           label="License Expiry Date"
                           inputVariant="outlined"
-                          value={formData.expiryDate}
+                          value={formData.licenseExpiryDate}
                           onChange={handleExpiryLicenseDateChange}
                         />
                       </LocalizationProvider>
