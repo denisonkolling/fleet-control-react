@@ -19,6 +19,7 @@ const ListTyreReading = Loadable(lazy(() => import('./pages/tyre/ListTyreReading
 const CreateVehicle = Loadable(lazy(() => import('./pages/vehicle/CreateVehicle')));
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+const ImageUpload = Loadable(lazy(() => import('./pages/demos/ImageUpload')));
 
 function App() {
 	return (
@@ -35,7 +36,8 @@ function App() {
 						<Route path="create-tyre" element={<CreateTyre />} />
 						<Route path="tyre-reading" element={<TyreReading />} />
 						<Route path="list-tyre-reading" element={<ListTyreReading />} />
-						<Route path="create-Vehicle" element={<CreateVehicle />} />
+						<Route path="create-vehicle" element={<CreateVehicle />} />
+						<Route path="image-upload" element={<ImageUpload />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />
