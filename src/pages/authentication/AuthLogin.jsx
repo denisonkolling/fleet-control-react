@@ -35,8 +35,8 @@ function AuthLogin() {
     <>
       <Formik
         initialValues={{
-          email: "info@codedthemes.com",
-          password: "123456",
+          email: "",
+          password: "",
           submit: null,
         }}
         validationSchema={Yup.object().shape({
@@ -70,7 +70,7 @@ function AuthLogin() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="email-login">Email Address</InputLabel>
+                  <InputLabel htmlFor="email-login">Email</InputLabel>
                   <OutlinedInput
                     id="email-login"
                     type="email"
@@ -181,13 +181,13 @@ function AuthLogin() {
                     variant="contained"
                     color="primary"
                   >
-                    Login
+                    Log In
                   </Button>
                 </AnimateButton>
               </Grid>
               <Grid item xs={12}>
                 <Divider>
-                  <Typography variant="caption"> Login with</Typography>
+                  <Typography variant="caption"> Log in with</Typography>
                 </Divider>
               </Grid>
               <Grid item xs={12}>

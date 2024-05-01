@@ -16,7 +16,7 @@ function Login() {
             alignItems="baseline"
             sx={{ mb: { xs: -0.5, sm: 0.5 } }}
           >
-            <Typography variant="h3">Login</Typography>
+            <Typography variant="h3">Log In</Typography>
             <Typography
               component={Link}
               to="/register"
