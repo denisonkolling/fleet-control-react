@@ -15,7 +15,7 @@ export const tyres = {
   children: [
     {
       id: "create-tyre",
-      title: "Create",
+      title: "Tyre Registration",
       type: "item",
       url: "/create-tyre",
       icon: icons.GiCarWheel,
