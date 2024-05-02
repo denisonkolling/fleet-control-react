@@ -17,10 +17,11 @@ import {
 } from "../../services/notification";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import Select from "@mui/material/Select";
+import { saveTyre } from "../../api/tyre";
 
 const CreateTyre = () => {
   const [formData, setFormData] = useState({
-    serialNumber: "",
+    serial: "",
     manufacturer: "",
     model: "",
     size: "",
@@ -47,8 +48,7 @@ const CreateTyre = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(formData);
-      //await saveTyre(formData);
+      await saveTyre(formData);
       successNotification("Tyre information saved successfully.");
       clearForm();
     } catch (err) {
@@ -66,13 +66,15 @@ const CreateTyre = () => {
 
   const clearForm = () => {
     setFormData({
-      serialNumber: "",
-      Manufacturer: "",
+      serial: "",
+      manufacturer: "",
       model: "",
       size: "",
       position: "",
       vehicle: "",
+      purchaseDate: null,
     });
+    setManufacturer('');
   };
 
   return (
@@ -86,9 +88,9 @@ const CreateTyre = () => {
                   <Grid item xs={12} lg={6}>
                     <TextField
                       fullWidth
-                      name="serialNumber"
+                      name="serial"
                       label="Serial Number"
-                      value={formData.serialNumber}
+                      value={formData.serial}
                       onChange={handleChange}
                     />
                   </Grid>
