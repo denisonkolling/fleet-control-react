@@ -22,7 +22,7 @@ export const tyres = {
     },
     {
       id: "tyre-reading",
-      title: "Reading",
+      title: "Wear Reading",
       type: "item",
       url: "/tyre-reading",
       icon: icons.TfiRulerPencil,
