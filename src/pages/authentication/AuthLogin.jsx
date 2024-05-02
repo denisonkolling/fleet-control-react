@@ -1,6 +1,5 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -17,7 +16,6 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import AnimateButton from "../../components/AnimateButton";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
-import OtherLogin from "./OtherLogin";
 
 function AuthLogin() {
   const [checked, setChecked] = React.useState(false);
@@ -184,15 +182,7 @@ function AuthLogin() {
                     Log In
                   </Button>
                 </AnimateButton>
-              </Grid>
-              <Grid item xs={12}>
-                <Divider>
-                  <Typography variant="caption"> Log in with</Typography>
-                </Divider>
-              </Grid>
-              <Grid item xs={12}>
-                <OtherLogin />
-              </Grid>
+              </Grid>            
             </Grid>
           </form>
         )}

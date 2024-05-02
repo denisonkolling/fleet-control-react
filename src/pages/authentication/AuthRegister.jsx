@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Divider from "@mui/material/Divider";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import Grid from "@mui/material/Grid";
@@ -18,7 +17,6 @@ import { Formik } from "formik";
 import AnimateButton from "../../components/AnimateButton";
 import { strengthColor, strengthIndicator } from "../../utils/password.util";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
-import OtherLogin from "./OtherLogin";
 
 function AuthRegister() {
   const [level, setLevel] = useState();
@@ -83,9 +81,7 @@ function AuthRegister() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="name-signup">
-                    Name
-                  </InputLabel>
+                  <InputLabel htmlFor="name-signup">Name</InputLabel>
                   <OutlinedInput
                     id="name-login"
                     type="name"
@@ -117,7 +113,7 @@ function AuthRegister() {
                     onBlur={handleBlur}
                     onChange={handleChange}
                     placeholder="Enter email address"
-                    inputProps={{autoComplete: "username"}}
+                    inputProps={{ autoComplete: "username" }}
                   />
                   {touched.email && errors.email && (
                     <FormHelperText error id="helper-text-email-signup">
@@ -159,7 +155,7 @@ function AuthRegister() {
                       </InputAdornment>
                     }
                     placeholder="********"
-                    inputProps={{autoComplete: "current-password"}}
+                    inputProps={{ autoComplete: "current-password" }}
                   />
                   {touched.password && errors.password && (
                     <FormHelperText error id="helper-text-password-signup">
@@ -218,14 +214,6 @@ function AuthRegister() {
                     Create Account
                   </Button>
                 </AnimateButton>
-              </Grid>
-              <Grid item xs={12}>
-                <Divider>
-                  <Typography variant="caption">Sign up with</Typography>
-                </Divider>
-              </Grid>
-              <Grid item xs={12}>
-                <OtherLogin />
               </Grid>
             </Grid>
           </form>
