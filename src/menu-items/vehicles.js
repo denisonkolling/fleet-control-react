@@ -13,14 +13,14 @@ export const vehicles = {
   children: [
     {
       id: "create-vehicle",
-      title: "Create",
+      title: "Vehicles Registration",
       type: "item",
       url: "/create-vehicle",
       icon: icons.TruckOutlined,
     },
     {
       id: "vehicles-map",
-      title: "Map",
+      title: "Vehicles Map",
       type: "item",
       url: "/vehicles-map",
       icon: icons.TbMap2,

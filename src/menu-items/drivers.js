@@ -13,7 +13,7 @@ export const drivers = {
   children: [
     {
       id: "create-driver",
-      title: "Create",
+      title: "Driver Registration",
       type: "item",
       url: "/create-driver",
       icon: icons.UserAddOutlined,
