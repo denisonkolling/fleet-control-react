@@ -145,8 +145,8 @@ OrderStatus.propTypes = {
 export default function VehiclesPositionTable() {
 
   const [rows, setRows] = useState(positionsTable)
-  const [order] = useState("desc");
-  const [orderBy] = useState("speed");
+  const [order] = useState("asc");
+  const [orderBy] = useState("status");
   const [selected] = useState([]);
 
   const isSelected = (plate) => selected.indexOf(plate) !== -1;
