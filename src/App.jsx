@@ -21,6 +21,7 @@ const MapVehicles = Loadable(lazy(() => import('./pages/vehicle/MapVehicles')));
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ImageUpload = Loadable(lazy(() => import('./pages/demos/ImageUpload')));
+const CreateTrip = Loadable(lazy(() => import('./pages/trip/CreateTrip')));
 
 function App() {
 	return (
@@ -40,6 +41,7 @@ function App() {
 						<Route path="create-vehicle" element={<CreateVehicle />} />
 						<Route path="vehicles-map" element={<MapVehicles />} />
 						<Route path="image-upload" element={<ImageUpload />} />
+						<Route path="create-trip" element={<CreateTrip />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />
