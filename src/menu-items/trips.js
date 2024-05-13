@@ -19,10 +19,10 @@ export const trips = {
       icon: icons.BiTrip,
     },
     {
-      id: "trip-expenses",
-      title: "Trip Expenses",
+      id: "trip-expense",
+      title: "Trip Expense",
       type: "item",
-      url: "/trip-expenses",
+      url: "/trip-expense",
       icon: icons.DollarOutlined,
     },
   ],
