@@ -81,7 +81,7 @@ const CreateTyre = () => {
     <>
       <Grid container rowSpacing={4.5} columnSpacing={2.75} sx={{ p: 0 }}>
         <Grid item xs={12} lg={6}>
-          <MainCard title="Information" codeHighlight>
+          <MainCard title="Information">
             <Box sx={{ p: 3, pb: 0 }}>
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={2} sx={{ py: 3, pb: 0, pt: 0 }}>
