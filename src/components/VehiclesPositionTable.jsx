@@ -13,23 +13,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import NumberFormat from "react-number-format";
 import Dot from "./Dot";
-
-function createData(plate, name, city, speed, status, distance) {
-  return { plate, name, speed, city, status, distance };
-}
-
-const rows = [
-  createData("ABC-1234", "Scania R450", "São Paulo", 40, 2, 40570),
-  createData("DEF-5678", "Volvo FH16", "Recife", 300, 0, 180139),
-  createData("GHI-9012", "Mercedes-Benz Actros", "Belo horizonte", 355, 1, 90989),
-  createData("JKL-3456", "MAN TGX", "Curitiba", 50, 1, 10239),
-  createData("MNO-7890", "Iveco Stralis", "Porto Alegre", 100, 1, 83348),
-  createData("PQRS-2468", "Renault T", "Goiânia", 99, 0, 410780),
-  createData("TUV-1357", "DAF XF", "Cuiabá", 125, 2, 70999),
-  createData("WXYZ-8023", "Ford Cargo", "CampoGrande", 89, 2, 10570),
-  createData("OPQ-4682", "Scania S500", "Rio de Janeiro", 185, 1, 98063),
-  createData("LMN-9753", "Volvo FMX", "Joinville", 100, 0, 14001),
-];
+import { positionsTable } from "../data/db";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -159,6 +143,8 @@ OrderStatus.propTypes = {
 };
 
 export default function VehiclesPositionTable() {
+
+  const [rows, setRows] = useState(positionsTable)
   const [order] = useState("desc");
   const [orderBy] = useState("speed");
   const [selected] = useState([]);
