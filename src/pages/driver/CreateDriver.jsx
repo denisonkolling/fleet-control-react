@@ -37,7 +37,7 @@ import {
 } from "../../services/notification";
 
 const CreateDriver = () => {
-  const [slot, setSlot] = useState("null");
+  const [slot, setSlot] = useState("card");
 
   const [formData, setFormData] = useState({
     firstName: "",
