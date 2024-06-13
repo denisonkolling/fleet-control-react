@@ -10,7 +10,7 @@ export const expenses = {
   type: "group",
   children: [
     {
-      id: "sample-page",
+      id: "expense-report",
       title: "Report",
       type: "item",
       url: "/expense-report",

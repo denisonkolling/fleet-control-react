@@ -23,6 +23,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const ImageUpload = Loadable(lazy(() => import('./pages/demos/ImageUpload')));
 const CreateTrip = Loadable(lazy(() => import('./pages/trip/CreateTrip')));
 const CreateTripExpense = Loadable(lazy(() => import('./pages/trip/TripExpense')));
+const CreateInvoice = Loadable(lazy(() => import('./pages/invoice/CreateInvoice')));
+const ExpenseReport = Loadable(lazy(() => import('./pages/expense/ExpenseReport')));
 
 function App() {
 	return (
@@ -44,6 +46,8 @@ function App() {
 						<Route path="image-upload" element={<ImageUpload />} />
 						<Route path="create-trip" element={<CreateTrip />} />
 						<Route path="trip-expense" element={<CreateTripExpense />} />
+						<Route path="create-invoice" element={<CreateInvoice />} />
+						<Route path="expense-report" element={<ExpenseReport />} />
 					</Route>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="login" element={<AuthLogin />} />
